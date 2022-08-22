@@ -5,7 +5,8 @@ function App() {
   const [student, setStudent] = useState(null);
     
   useEffect(async () => {
-    const API_URL = process.env.REACT_APP_BASE_URL;
+    //const API_URL = process.env.REACT_APP_BASE_URL;
+    const API_URL = "http://ec2-3-83-100-66.compute-1.amazonaws.com/api";
     try {
       const response = await axios.get(`${API_URL}/students/random`);
       const student = response.data;
