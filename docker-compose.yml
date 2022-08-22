@@ -14,7 +14,7 @@ services:
     container_name: node_projeto23_app
     build: ./back-end
     ports:
-      - 5000:5000
+      - 4458:5000
     depends_on:
       - postgres_projeto23_db
     env_file:
