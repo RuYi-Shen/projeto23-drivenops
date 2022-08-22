@@ -18,7 +18,8 @@ function App() {
     } catch (error) {
       console.log(error);
       console.log(API_URL);
-      alert("Não foi possível realizar o sorteio!");
+      //alert("Não foi possível realizar o sorteio!");
+      alert(error.message);
     }
   }, []);
   
