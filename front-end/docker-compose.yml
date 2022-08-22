@@ -5,9 +5,9 @@ services:
     volumes:
       - build_react:/var/www/html
 
-  nginx:
+  nginx_i:
     build: ./nginx
-    container_name: nginx
+    container_name: nginx_i
     ports:
       - 80:80
     volumes:
