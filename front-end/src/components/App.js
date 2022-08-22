@@ -24,7 +24,7 @@ function App() {
   }, []);
   
   return (
-    student ? <h1>{student.name}</h1> : "Carregando..."
+    student ? <h1>{student.name}</h1> : "Carregando... new"
   )
 }
 
