@@ -1,0 +1,23 @@
+services:
+  db_postgres_github_actions:
+    image: postgres
+    container_name: db_postgres_github_actions
+    restart: always
+    ports:
+      - 1234:5432
+    env_file:
+      - .env.test
+    volumes:
+      - pg:/var/lib/postgresql/data
+  node_app_github_actions:
+    container_name: node_app_github_actions
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - db_postgres_github_actions
+    env_file:
+      - .env.test
+
+volumes:
+  pg: # volume para os postgres
